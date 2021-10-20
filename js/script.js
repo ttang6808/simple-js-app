@@ -32,10 +32,10 @@ for (let i = 0; i < pokemonList.length; i++){
 // Iterating to write Pokemon's name and height on DOM
 for (let j = 0; j < pokemonList.length; j++){
 
-  if (pokemonList[i] .height == largest && pokemonList[i].height > 1){
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + " meters) - Wow, that's big!<br>")
+  if (pokemonList[j] .height == maxHeight && pokemonList[j].height > 1){
+    document.write(pokemonList[j].name + ' (height: ' + pokemonList[j].height + " meters) - Wow, that's big!<br>")
   }
   else{
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ' meters)<br>')
+    document.write(pokemonList[j].name + ' (height: ' + pokemonList[j].height + ' meters)<br>')
   }
 }
