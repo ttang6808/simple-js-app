@@ -24,7 +24,7 @@ let pokemonList = [
 // Iterating to find the maximum height value
 let maxHeight = pokemonList[0].height;
 for (let i = 0; i < pokemonList.length; i++){
-  if (pokemonList[i].height > largest){
+  if (pokemonList[i].height > maxHeight){
     maxHeight = pokemonList[i].height;
   }
 }
