@@ -28,3 +28,14 @@ for (let i = 0; i < pokemonList.length; i++){
     maxHeight = pokemonList[i].height;
   }
 }
+
+// Iterating to write Pokemon's name and height on DOM
+for (let j = 0; j < pokemonList.length; j++){
+
+  if (pokemonList[i] .height == largest && pokemonList[i].height > 1){
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + " meters) - Wow, that's big!<br>")
+  }
+  else{
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ' meters)<br>')
+  }
+}
