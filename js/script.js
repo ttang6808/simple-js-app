@@ -1,25 +1,41 @@
-let pokemonList = [
-  {
-    name: 'Bulbasaur',
-    height: 0.7,
-    types: ['grass', 'poison']
-  },
-  {
-    name: 'Ninetales',
-    height: 1.1,
-    types: ['fire']
-  },
-  {
-    name: 'Lickitung',
-    height: 1.2,
-    types: ['normal']
-  },
-  {
-    name: 'Espeon',
-    height: 0.9,
-    types: ['psychic']
+let pokemonRepository = (function(){
+  let pokemonList = [
+    {
+      name: 'Bulbasaur',
+      height: 0.7,
+      types: ['grass', 'poison']
+    },
+    {
+      name: 'Ninetales',
+      height: 1.1,
+      types: ['fire']
+    },
+    {
+      name: 'Lickitung',
+      height: 1.2,
+      types: ['normal']
+    },
+    {
+      name: 'Espeon',
+      height: 0.9,
+      types: ['psychic']
+    }
+  ];
+
+  function add(item){
+    pokemonList.push(item);
   }
-];
+
+  function getAll(){
+    return pokemonList;
+  }
+
+  return{
+    add: add,
+    getAll: getAll
+  };
+})();
+
 
 // Iterating to find the maximum height value
 let arbHeight = pokemonList[0].height;
