@@ -38,10 +38,9 @@ let pokemonRepository = (function(){
 
 
 // Iterating to find the maximum height value
-let arbHeight = pokemonList[0].height;
+let arbHeight = pokemonRepository.getAll()[0].height;
 
-pokemonList.forEach(function(pokemon){
-
+pokemonRepository.getAll().forEach(function(pokemon){
   if (pokemon.height > arbHeight){
     arbHeight = pokemon.height;
   }
@@ -49,7 +48,7 @@ pokemonList.forEach(function(pokemon){
 });
 
 // Iterating to write Pokemon's name and height on DOM
-pokemonList.forEach(function(pokemon){
+pokemonRepository.getAll().forEach(function(pokemon){
 
   if (pokemon.height == maxHeight && pokemon.height > 1){
     document.write(pokemon.name + ' (height: ' + pokemon.height + " meters) - Wow, that's big!<br>")
