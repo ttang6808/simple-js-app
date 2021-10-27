@@ -23,7 +23,12 @@ let pokemonRepository = (function(){
   ];
 
   function add(item){
-    pokemonList.push(item);
+    if (typeof(item) === 'object'){
+      return pokemonList.push(item);
+    }
+    else{
+      alert('An object parameter is required.');
+    }
   }
 
   function getAll(){
