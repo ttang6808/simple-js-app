@@ -22,6 +22,16 @@ let pokemonRepository = (function(){
     }
   ];
 
+  // isObject function to check if parameter is an object
+  function isObject(item){
+    if (typeof(item) === 'object'){
+      return true;
+    }
+    else{
+      alert('Add function parameter is not an object.')
+    }
+  }
+  
   function add(item){
     if (typeof(item) === 'object'){
       return pokemonList.push(item);
