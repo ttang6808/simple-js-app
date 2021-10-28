@@ -56,12 +56,15 @@ let pokemonRepository = (function(){
     }
   }
 
+  // add function to append new items/objects onto pokemonList
   function add(item){
-    if (typeof(item) === 'object'){
-      return pokemonList.push(item);
+    if (
+      isObject(item) && !compareKeys(pokemonList[0], item) ||
+      !isObject(item) && compareKeys(pokemonList[0], item)){
+      alert('Could not add item to the list.')
     }
     else{
-      alert('An object parameter is required.');
+      return pokemonList.push(item);
     }
   }
 
