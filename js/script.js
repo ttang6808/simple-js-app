@@ -31,7 +31,31 @@ let pokemonRepository = (function(){
       alert('Add function parameter is not an object.')
     }
   }
-  
+
+  // isObject function to check if parameter is an object
+  function isObject(item){
+    if (typeof(item) === 'object'){
+      return true;
+    }
+    else{
+      alert('Add function parameter is not an object.');
+    }
+  }
+
+  // compareKeys function to check if the keys between objects are equal
+  function compareKeys(object1, object2){
+    let key1 = Object.keys(object1);
+    let key2 = Object.keys(object2);
+    let key1String = key1.join();
+    let key2String = key2.join();
+    if (key1String === key2String){
+      return true;
+    }
+    else{
+      alert('Parameter keys are not the same.');
+    }
+  }
+
   function add(item){
     if (typeof(item) === 'object'){
       return pokemonList.push(item);
