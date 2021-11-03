@@ -80,6 +80,8 @@ let pokemonRepository = (function(){
     button.classList.add('pokemon-button');
     pokemonListItem.appendChild(button);
     pokemonList.appendChild(pokemonListItem);
+    // Showing details of selected pokemon button
+    pokemonSelectedEvent(button,pokemon);
   }
 
   function pokemonSelectedEvent(button,pokemon){
