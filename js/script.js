@@ -82,6 +82,10 @@ let pokemonRepository = (function(){
     pokemonList.appendChild(pokemonListItem);
   }
 
+  function showDetails(pokemon){
+    console.log(pokemon);
+  }
+
   return{
     add: add,
     getAll: getAll,
