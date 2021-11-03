@@ -97,5 +97,4 @@ let pokemonRepository = (function(){
 // Iterating to write Pokemon's name on DOM
 pokemonRepository.getAll().forEach(function(pokemon){
   pokemonRepository.addListItem(pokemon);
-  }
 });
