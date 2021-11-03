@@ -92,7 +92,7 @@ let pokemonRepository = (function(){
   }
 
   function showDetails(pokemon){
-    console.log(pokemon);
+    console.log(pokemon.name);
   }
 
   return{
