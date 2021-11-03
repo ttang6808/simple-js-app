@@ -72,30 +72,26 @@ let pokemonRepository = (function(){
     return pokemonList;
   }
 
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector('.pokemon-list');
+    let pokemonListItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('pokemon-button');
+    pokemonListItem.appendChild(button);
+    pokemonList.appendChild(pokemonListItem);
+  }
+
   return{
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
 
-// Iterating to find the maximum height value
-let arbHeight = pokemonRepository.getAll()[0].height;
-
+// Iterating to write Pokemon's name on DOM
 pokemonRepository.getAll().forEach(function(pokemon){
-  if (pokemon.height > arbHeight){
-    arbHeight = pokemon.height;
-  }
-  return maxHeight = arbHeight;
-});
-
-// Iterating to write Pokemon's name and height on DOM
-pokemonRepository.getAll().forEach(function(pokemon){
-
-  if (pokemon.height == maxHeight && pokemon.height > 1){
-    document.write(pokemon.name + ' (height: ' + pokemon.height + " meters) - Wow, that's big!<br>")
-  }
-  else{
-    document.write(pokemon.name + ' (height: ' + pokemon.height + ' meters)<br>')
+  pokemonRepository.addListItem(pokemon);
   }
 });
