@@ -114,6 +114,19 @@ let pokemonRepository = (function(){
     })
   }
 
+  function loadDetails(pokemon){
+    let url = pokemon.detailsUrl;
+    return fetch(url).then(function (response){
+      return response.json();
+    }).then(function (details){
+      pokemon.imageUrl = details.sprites.front_default;
+      pokemon.height = details.height;
+      pokemon.types = details.types;
+    }).catch(function (e){
+      console.error(e);
+    });
+  }
+
   return{
     add: add,
     getAll: getAll,
