@@ -140,6 +140,8 @@ let pokemonRepository = (function(){
 
 
 // Iterating to write Pokemon's name on DOM
-pokemonRepository.getAll().forEach(function(pokemon){
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function(){
+  pokemonRepository.getAll().forEach(function(pokemon){
+    pokemonRepository.addListItem(pokemon);
+  });
 });
