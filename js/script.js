@@ -40,7 +40,7 @@ let pokemonRepository = (function(){
 
   function showDetails(pokemon){
     loadDetails(pokemon).then(function (){
-      console.log(pokemon);
+      showModal(pokemon.name,  'Height: ' + pokemon.height, pokemon.imageUrl);
     });
   }
 
