@@ -2,6 +2,10 @@ ul {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .pokemon-button {
   border: none;
   font-weight: 400;
