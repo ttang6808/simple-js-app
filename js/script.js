@@ -127,8 +127,15 @@ let pokemonRepository = (function(){
 
   // Hide modal function when closed
   function hideModal() {
-      modalContainer.classList.remove('is-visible');
+    modalContainer.classList.remove('is-visible');
   }
+
+  // Closing with Esc key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalContainer.classList.contains ('is-visible')) {
+      hideModal();
+    }
+  });
 
   return{
     add: add,
