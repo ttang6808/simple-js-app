@@ -121,6 +121,10 @@ let pokemonRepository = (function(){
     modalContainer.classList.add('is-visible');
   }
 
+  document.querySelector('#show-modal').addEventListener('click',() => {
+    showModal('Modal title', 'This is the modal content!', 'image');
+  });
+  
   return{
     add: add,
     getAll: getAll,
