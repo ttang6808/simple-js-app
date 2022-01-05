@@ -83,6 +83,13 @@ let pokemonRepository = (function(){
     let modal = document.createElement('div');
     modal.classList.add('modal');
 
+  // Closing with close button
+    let closeButtonElement = document.createElement('button');
+    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.innerText = 'X';
+
+
+    closeButtonElement.addEventListener('click', hideModal);
 
   return{
     add: add,
