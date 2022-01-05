@@ -91,6 +91,13 @@ let pokemonRepository = (function(){
 
     closeButtonElement.addEventListener('click', hideModal);
 
+  // Add the new modal content
+    let titleElement = document.createElement('h1');
+    titleElement.innerText = title;
+
+    let contentElement = document.createElement('p');
+    contentElement.innerText = text;
+
   return{
     add: add,
     getAll: getAll,
