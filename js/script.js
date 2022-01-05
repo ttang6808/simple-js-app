@@ -108,11 +108,18 @@ let pokemonRepository = (function(){
     // setting `src` property to set the actual element's `src` attribute
     // this also works on <img> elements selected by querySelector() method, it is not specific for <img> elements created with createElement() methods
     imageElement.src = 'pokemon.imageUrl';
-
     imageContainer.appendChild(imageElement);
-
     modal.appendChild(imageContainer);
     // End of modal image
+
+
+    modal.appendChild(closeButtonElement);
+    modal.appendChild(titleElement);
+    modal.appendChild(contentElement);
+    modalContainer.appendChild(modal);
+
+    modalContainer.classList.add('is-visible');
+  }
 
   return{
     add: add,
