@@ -88,7 +88,6 @@ let pokemonRepository = (function(){
     closeButtonElement.classList.add('modal-close');
     closeButtonElement.innerText = 'X';
 
-
     closeButtonElement.addEventListener('click', hideModal);
 
   // Add the new modal content
@@ -97,6 +96,23 @@ let pokemonRepository = (function(){
 
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
+
+
+
+    // Here is where I started using the example from codepen to set the src attribute for the image
+    let imageContainer = document.querySelector('#image-container');
+
+    // Create an <img> element
+    let imageElement = document.createElement('img');
+
+    // setting `src` property to set the actual element's `src` attribute
+    // this also works on <img> elements selected by querySelector() method, it is not specific for <img> elements created with createElement() methods
+    imageElement.src = 'pokemon.imageUrl';
+
+    imageContainer.appendChild(imageElement);
+
+    modal.appendChild(imageContainer);
+    // End of modal image
 
   return{
     add: add,
