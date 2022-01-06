@@ -97,25 +97,19 @@ let pokemonRepository = (function(){
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
 
-
-
-    // Here is where I started using the example from codepen to set the src attribute for the image
-    let imageContainer = document.querySelector('#image-container');
-
     // Create an <img> element
+    let imageContainer = document.createElement('div');
     let imageElement = document.createElement('img');
 
-    // setting `src` property to set the actual element's `src` attribute
-    // this also works on <img> elements selected by querySelector() method, it is not specific for <img> elements created with createElement() methods
-    imageElement.src = 'pokemon.imageUrl';
+    imageElement.src = image;
     imageContainer.appendChild(imageElement);
-    modal.appendChild(imageContainer);
     // End of modal image
 
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(contentElement);
+    modal.appendChild(imageContainer);
     modalContainer.appendChild(modal);
 
     modalContainer.classList.add('is-visible');
